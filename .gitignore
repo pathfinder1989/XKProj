@@ -1,4 +1,6 @@
 **/Build/*
 **/DerivedData/*
 **/*.xcodeproj/project.xcworkspace/xcuserdata/*
-**/*.xcodeproj/xcuserdata/*
+**/*.xcodeproj/xcuserdata/
+Pods/*
+**/*.xcworkspace/xcuserdata/*
