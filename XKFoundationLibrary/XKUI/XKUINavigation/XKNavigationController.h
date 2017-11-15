@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  XKNavigationController.h
 //  XKProj
 //
 //  Created by meishi on 14/11/2017.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface XKNavigationController : UINavigationController
 
 @end
-

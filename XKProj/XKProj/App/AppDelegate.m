@@ -7,19 +7,66 @@
 //
 
 #import "AppDelegate.h"
+#import "XKNavigationController.h"
+#import "XKManager.h"
+
+#import "XFirstController.h"
+#import "XSecondController.h"
+#import "XNavigationController.h"
+#import "XTabBarController.h"
 
 @interface AppDelegate ()
+@property(strong ,nonatomic) XTabBarController *tabbarController;
 
 @end
 
 @implementation AppDelegate
 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [self initWindow];
     return YES;
 }
 
++ (instancetype)sharedDelegate
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
+- (UIWindow *)appKeyWindow
+{
+    return self.window;
+}
+
+#pragma mark -初始化window
+- (void)initWindow
+{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.tabbarController = [XTabBarController new];
+    
+    XFirstController *firstController = [[XFirstController alloc] init];
+    XNavigationController *firstNavController = [[XNavigationController alloc] initWithRootViewController:firstController];
+    
+    XSecondController *secondController = [[XSecondController alloc] init];
+    XNavigationController *secondNavController = [[XNavigationController alloc] initWithRootViewController:secondController];
+    
+    self.tabbarController.viewControllers = @[firstNavController, secondNavController];
+    self.window.rootViewController = self.tabbarController;
+    
+    //    self.mainController = [[XKViewController alloc] init];
+//    self.navigationController = [[XKNavigationController alloc] initWithRootViewController:self.mainController];
+//    self.window.rootViewController = self.navigationController;
+    
+    
+    [self.window makeKeyAndVisible];
+}
+#pragma mark - 全局单例初始化
+- (void)initManager
+{
+    //初始化umeng统计
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
