@@ -26,8 +26,7 @@
 
 - (void)initLaunchView
 {
-    UIWindow *keyWindow = [[AppDelegate sharedDelegate] appKeyWindow];
-    [keyWindow addSubview:self.launchController.view];
+    [self.view addSubview:self.launchController.view];
 }
 
 #pragma mark - methods
@@ -42,7 +41,7 @@
 {
     if (!_launchController) {
         _launchController = [XLaunchController new];
-        
+        _launchController.view.frame = [UIScreen mainScreen].bounds;
         MSWeakObject(self)
         _launchController.autoDismissBlock = ^{
             [weakself launchDidDismissed];

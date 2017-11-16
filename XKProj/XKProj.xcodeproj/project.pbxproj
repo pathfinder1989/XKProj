@@ -21,6 +21,7 @@
 		C54FA9101FBC2EBF00B28C87 /* XTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54FA9071FBC2E3200B28C87 /* XTabBarController.m */; };
 		C54FA91C1FBC34D400B28C87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54FA9191FBC348F00B28C87 /* main.m */; };
 		C54FA91D1FBC364300B28C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54FA8FE1FBC2E3200B28C87 /* Assets.xcassets */; };
+		C568E9C11FBD8F88000E8F6B /* MSLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9C01FBD8F88000E8F6B /* MSLaunchView.m */; };
 		C5FB72431FBC472C003416B1 /* MSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72421FBC472C003416B1 /* MSCollectionView.m */; };
 		C5FB72471FBC47F8003416B1 /* MSSecondCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72461FBC47F8003416B1 /* MSSecondCollectionCell.m */; };
 		C5FB724A1FBC4831003416B1 /* MSSecondCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72491FBC4831003416B1 /* MSSecondCollectionViewLayout.m */; };
@@ -55,6 +56,8 @@
 		C54FA9181FBC348F00B28C87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54FA9191FBC348F00B28C87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C54FA91B1FBC34BA00B28C87 /* XKProjPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XKProjPrefixHeader.pch; sourceTree = "<group>"; };
+		C568E9BF1FBD8F88000E8F6B /* MSLaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSLaunchView.h; sourceTree = "<group>"; };
+		C568E9C01FBD8F88000E8F6B /* MSLaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSLaunchView.m; sourceTree = "<group>"; };
 		C5BC469D1FBAFBAD003F89ED /* XKProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XKProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FB72411FBC472C003416B1 /* MSCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCollectionView.h; sourceTree = "<group>"; };
 		C5FB72421FBC472C003416B1 /* MSCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCollectionView.m; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 		C54FA8D91FBC25CB00B28C87 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				C568E9BE1FBD8F79000E8F6B /* View */,
 				C54FA8DA1FBC25CB00B28C87 /* XLaunchController.h */,
 				C54FA8DB1FBC25CB00B28C87 /* XLaunchController.m */,
 			);
@@ -183,6 +187,15 @@
 			children = (
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		C568E9BE1FBD8F79000E8F6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C568E9BF1FBD8F88000E8F6B /* MSLaunchView.h */,
+				C568E9C01FBD8F88000E8F6B /* MSLaunchView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C5BC46941FBAFBAD003F89ED = {
@@ -377,6 +390,7 @@
 				C54FA8E51FBC26AE00B28C87 /* XNavigationController.m in Sources */,
 				C54FA8E41FBC26AA00B28C87 /* XBaseController.m in Sources */,
 				C54FA8E31FBC26A400B28C87 /* MSTableView.m in Sources */,
+				C568E9C11FBD8F88000E8F6B /* MSLaunchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,10 @@
 //
 
 #import "XLaunchController.h"
+#import "MSLaunchView.h"
+@interface XLaunchController ()
+@property(strong ,nonatomic) MSLaunchView *launchView;
+@end
 
 @implementation XLaunchController
 
@@ -14,6 +18,10 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
+    
+    [self.view addSubview:self.launchView];
+    UIImage *defaultImage = [UIImage appLaunchImage];
+    [_launchView setDefaultImage:defaultImage];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
@@ -29,4 +37,20 @@
     });
 }
 
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    _launchView.frame = self.view.bounds;
+}
+
+#pragma mark - propery
+- (MSLaunchView *)launchView
+{
+    if (!_launchView) {
+        _launchView = [MSLaunchView new];
+        _launchView.backgroundColor = [UIColor clearColor];
+    }
+    return _launchView;
+}
 @end

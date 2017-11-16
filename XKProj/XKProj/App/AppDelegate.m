@@ -35,6 +35,7 @@
 
 - (UIWindow *)appKeyWindow
 {
+    self.window.hidden = NO;
     return self.window;
 }
 
@@ -44,7 +45,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.tabbarController = [XTabBarController new];
+    self.tabbarController = [[XTabBarController alloc] init];
     
     XFirstController *firstController = [[XFirstController alloc] init];
     XNavigationController *firstNavController = [[XNavigationController alloc] initWithRootViewController:firstController];

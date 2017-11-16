@@ -12,12 +12,15 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
 /**
  UIApplication 
 
  @return AppDelegate 对象
  */
 + (instancetype)sharedDelegate;
+
+/**
+ 当前显示的window
+ */
 - (UIWindow *)appKeyWindow;
 @end
