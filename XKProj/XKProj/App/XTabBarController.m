@@ -8,6 +8,9 @@
 
 #import "XTabBarController.h"
 #import "XLaunchController.h"
+#import "XFirstController.h"
+#import "XSecondController.h"
+#import "XNavigationController.h"
 
 @interface XTabBarController ()
 
@@ -16,6 +19,26 @@
 @end
 
 @implementation XTabBarController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self initialization];
+    }
+    return self;
+}
+
+- (void)initialization
+{
+    XFirstController *firstController = [[XFirstController alloc] init];
+    XNavigationController *firstNavController = [[XNavigationController alloc] initWithRootViewController:firstController];
+    
+    XSecondController *secondController = [[XSecondController alloc] init];
+    XNavigationController *secondNavController = [[XNavigationController alloc] initWithRootViewController:secondController];
+    
+    self.viewControllers = @[firstNavController, secondNavController];
+}
 
 - (void)viewDidLoad
 {

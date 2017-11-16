@@ -9,10 +9,6 @@
 #import "AppDelegate.h"
 #import "XKNavigationController.h"
 #import "XKManager.h"
-
-#import "XFirstController.h"
-#import "XSecondController.h"
-#import "XNavigationController.h"
 #import "XTabBarController.h"
 
 @interface AppDelegate ()
@@ -46,14 +42,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     self.tabbarController = [[XTabBarController alloc] init];
-    
-    XFirstController *firstController = [[XFirstController alloc] init];
-    XNavigationController *firstNavController = [[XNavigationController alloc] initWithRootViewController:firstController];
-    
-    XSecondController *secondController = [[XSecondController alloc] init];
-    XNavigationController *secondNavController = [[XNavigationController alloc] initWithRootViewController:secondController];
-    
-    self.tabbarController.viewControllers = @[firstNavController, secondNavController];
     self.window.rootViewController = self.tabbarController;
     
     //    self.mainController = [[XKViewController alloc] init];

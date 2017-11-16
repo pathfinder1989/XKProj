@@ -95,7 +95,8 @@
     CGFloat collectionContentInsetRight = self.collectionInset.right;
     
     //计算每一个item的宽高
-    CGFloat itemWidth = CGRectGetWidth(self.collectionView.frame) - self.columnSpacing * (self.columnCount - 1) - collectionContentInsetLeft - collectionContentInsetRight;
+    //[UIScreen mainScreen].bounds.size.width
+    CGFloat itemWidth = (CGRectGetWidth(self.collectionView.frame) - self.columnSpacing * (self.columnCount - 1) - collectionContentInsetLeft - collectionContentInsetRight) / self.columnCount;
     CGFloat itemHeight= [self.delegtate secondCollectionViewLayout:self heightForWidth:itemWidth atIndexPath:indexPath];
     
     //计算每一个item的位置

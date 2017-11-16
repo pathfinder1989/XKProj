@@ -74,7 +74,7 @@
 - (MSSecondCollectionViewLayout *)collectionViewLayout
 {
     if (!_collectionViewLayout) {
-        _collectionViewLayout = [MSSecondCollectionViewLayout new];
+        _collectionViewLayout = [[MSSecondCollectionViewLayout alloc] init];
         _collectionViewLayout.columnCount = 2;
         _collectionViewLayout.collectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
         _collectionViewLayout.rowSpacing = 10;
