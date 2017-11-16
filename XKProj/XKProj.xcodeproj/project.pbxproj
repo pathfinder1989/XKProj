@@ -20,6 +20,10 @@
 		C54FA90F1FBC2EBF00B28C87 /* XKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54FA9051FBC2E3200B28C87 /* XKViewController.m */; };
 		C54FA9101FBC2EBF00B28C87 /* XTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54FA9071FBC2E3200B28C87 /* XTabBarController.m */; };
 		C54FA91C1FBC34D400B28C87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54FA9191FBC348F00B28C87 /* main.m */; };
+		C54FA91D1FBC364300B28C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54FA8FE1FBC2E3200B28C87 /* Assets.xcassets */; };
+		C5FB72431FBC472C003416B1 /* MSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72421FBC472C003416B1 /* MSCollectionView.m */; };
+		C5FB72471FBC47F8003416B1 /* MSSecondCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72461FBC47F8003416B1 /* MSSecondCollectionCell.m */; };
+		C5FB724A1FBC4831003416B1 /* MSSecondCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72491FBC4831003416B1 /* MSSecondCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,12 @@
 		C54FA9191FBC348F00B28C87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C54FA91B1FBC34BA00B28C87 /* XKProjPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XKProjPrefixHeader.pch; sourceTree = "<group>"; };
 		C5BC469D1FBAFBAD003F89ED /* XKProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XKProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5FB72411FBC472C003416B1 /* MSCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCollectionView.h; sourceTree = "<group>"; };
+		C5FB72421FBC472C003416B1 /* MSCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCollectionView.m; sourceTree = "<group>"; };
+		C5FB72451FBC47F8003416B1 /* MSSecondCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSecondCollectionCell.h; sourceTree = "<group>"; };
+		C5FB72461FBC47F8003416B1 /* MSSecondCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSSecondCollectionCell.m; sourceTree = "<group>"; };
+		C5FB72481FBC4831003416B1 /* MSSecondCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSecondCollectionViewLayout.h; sourceTree = "<group>"; };
+		C5FB72491FBC4831003416B1 /* MSSecondCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSSecondCollectionViewLayout.m; sourceTree = "<group>"; };
 		FAF284A05F21052E4B538D05 /* Pods-XKProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKProj.release.xcconfig"; path = "../Pods/Target Support Files/Pods-XKProj/Pods-XKProj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +98,7 @@
 		C54FA8C91FBC256500B28C87 /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				C5FB72441FBC4753003416B1 /* View */,
 				C54FA8CA1FBC256500B28C87 /* XSecondController.h */,
 				C54FA8CB1FBC256500B28C87 /* XSecondController.m */,
 			);
@@ -127,6 +138,8 @@
 			children = (
 				C54FA8DD1FBC268800B28C87 /* MSTableView.h */,
 				C54FA8DE1FBC268800B28C87 /* MSTableView.m */,
+				C5FB72411FBC472C003416B1 /* MSCollectionView.h */,
+				C5FB72421FBC472C003416B1 /* MSCollectionView.m */,
 				C54FA8DF1FBC268800B28C87 /* XBaseController.h */,
 				C54FA8E01FBC268800B28C87 /* XBaseController.m */,
 				C54FA8E11FBC268800B28C87 /* XNavigationController.h */,
@@ -206,6 +219,17 @@
 			path = XKProj;
 			sourceTree = "<group>";
 		};
+		C5FB72441FBC4753003416B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5FB72451FBC47F8003416B1 /* MSSecondCollectionCell.h */,
+				C5FB72461FBC47F8003416B1 /* MSSecondCollectionCell.m */,
+				C5FB72481FBC4831003416B1 /* MSSecondCollectionViewLayout.h */,
+				C5FB72491FBC4831003416B1 /* MSSecondCollectionViewLayout.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E4A5F2880C2B78EA80DC9E5E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54FA91D1FBC364300B28C87 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +364,12 @@
 			files = (
 				C54FA91C1FBC34D400B28C87 /* main.m in Sources */,
 				C54FA90D1FBC2EBF00B28C87 /* AppDelegate.m in Sources */,
+				C5FB72431FBC472C003416B1 /* MSCollectionView.m in Sources */,
+				C5FB72471FBC47F8003416B1 /* MSSecondCollectionCell.m in Sources */,
 				C54FA90E1FBC2EBF00B28C87 /* XKManager.m in Sources */,
 				C54FA90F1FBC2EBF00B28C87 /* XKViewController.m in Sources */,
 				C54FA9101FBC2EBF00B28C87 /* XTabBarController.m in Sources */,
+				C5FB724A1FBC4831003416B1 /* MSSecondCollectionViewLayout.m in Sources */,
 				C54FA8E81FBC274700B28C87 /* XLaunchController.m in Sources */,
 				C54FA8E91FBC274700B28C87 /* MSFirstTableCell.m in Sources */,
 				C54FA8E71FBC272500B28C87 /* XSecondController.m in Sources */,

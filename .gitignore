@@ -3,4 +3,5 @@
 **/*.xcodeproj/project.xcworkspace/xcuserdata/*
 **/*.xcodeproj/xcuserdata/
 Pods/*
-**/*.xcworkspace/xcuserdata/*
+**/*.xcworkspace/xcuserdata/
+.idea*

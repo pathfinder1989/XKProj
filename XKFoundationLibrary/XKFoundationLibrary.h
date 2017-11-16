@@ -10,5 +10,6 @@
 
 #import "XKGlobalMacros.h"
 #import "XKUI.h"
+#import "XKFoundation.h"
 
 #endif /* XKFoundationLibrary_h */

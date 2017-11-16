@@ -14,24 +14,23 @@
 
 @implementation XNavigationController
 
++ (void)initialize
+{
+    UIColor *navBgColor = [UIColor colorWithRed:0.45 green:0.66 blue:0.66 alpha:1.00];
+    UIColor *navTextColor = [UIColor whiteColor];
+    
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    [navigationBar setBarTintColor:navTextColor];
+    [navigationBar setTintColor:navBgColor];
+    [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName :navTextColor, NSFontAttributeName : [UIFont systemFontOfSize:18]}];
+    
+    [navigationBar setBackgroundImage:[UIImage imageWithColor:navBgColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    //[navBar setShadowImage:[UIImage new]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
