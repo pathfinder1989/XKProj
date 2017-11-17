@@ -59,6 +59,7 @@
     [self.collectionView setCurrentSelectedIndexPath:indexPath];
     
     MSSecondDetailController *controller = [MSSecondDetailController new];
+    controller.hidesBottomBarWhenPushed = YES;
     controller.shouldTransition = YES;
     [self.navigationController pushViewController:controller animated:YES];
 }

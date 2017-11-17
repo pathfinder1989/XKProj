@@ -33,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initNavigationBar];
     //导航控制器的委托方法
     self.delegate = self;
     
@@ -40,7 +41,6 @@
     self.interactivePopGestureRecognizer.enabled = YES;
     //系统右滑代理
     //self.interactivePopGestureRecognizer.delegate = self;
-    
 }
 
 - (void)initNavigationBar
@@ -48,26 +48,25 @@
     UIColor *navBgColor = [UIColor colorWithRed:0.45 green:0.66 blue:0.66 alpha:1.00];
     UIColor *navTextColor = [UIColor whiteColor];
     
-    UINavigationBar *navigationBar = self.navigationBar;//[UINavigationBar appearance];
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
     [navigationBar setBarTintColor:navTextColor];
-    [navigationBar setTintColor:navBgColor];
+    [navigationBar setTintColor:navTextColor];
     [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName :navTextColor, NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     
     [navigationBar setBackgroundImage:[UIImage imageWithColor:navBgColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
 }
 
-
 #pragma mark - super push pop
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    //XTabBarController *tabbarController = [[AppDelegate sharedDelegate] windowRootController];
-    viewController.hidesBottomBarWhenPushed = YES;
     [super pushViewController:viewController animated:animated];
 }
 
 - (nullable UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
-    return [super popViewControllerAnimated:animated];
+    UIViewController *controller = [super popViewControllerAnimated:animated];
+    NSLog(@"fadsfsdadfsa----: %@", controller.navigationController.viewControllers);
+    return controller;
 }
 
 #pragma mark - UINavigationControllerDelegate
