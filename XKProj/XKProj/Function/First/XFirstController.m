@@ -10,7 +10,8 @@
 #import "MSTableView.h"
 #import "MSFirstTableCell.h"
 
-@interface XFirstController ()<UITableViewDelegate, UITableViewDataSource>
+@interface XFirstController ()
+<UITableViewDelegate, UITableViewDataSource>
 @property(strong ,nonatomic) MSTableView *tableView;
 @property(strong ,nonatomic) NSMutableArray *dataArray;
 @end

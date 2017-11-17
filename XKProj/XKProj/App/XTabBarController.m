@@ -7,9 +7,10 @@
 //
 
 #import "XTabBarController.h"
+#import "XNavigationController.h"
 #import "XFirstController.h"
 #import "XSecondController.h"
-#import "XNavigationController.h"
+#import "MSThirdController.h"
 
 @interface XTabBarController ()
 
@@ -34,7 +35,10 @@
     XSecondController *secondController = [[XSecondController alloc] init];
     XNavigationController *secondNavController = [[XNavigationController alloc] initWithRootViewController:secondController];
     
-    self.viewControllers = @[firstNavController, secondNavController];
+    MSThirdController *thirdController = [[MSThirdController alloc] init];
+    XNavigationController *thirdNavController = [[XNavigationController alloc] initWithRootViewController:thirdController];
+    
+    self.viewControllers = @[firstNavController, secondNavController, thirdNavController];
 }
 
 - (void)viewDidLoad

@@ -26,6 +26,9 @@
 		C568E9C71FBD989A000E8F6B /* MSTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9C61FBD989A000E8F6B /* MSTransition.m */; };
 		C568E9D61FBE7F23000E8F6B /* MSSecondDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9D51FBE7F23000E8F6B /* MSSecondDetailController.m */; };
 		C568E9DA1FBEDC54000E8F6B /* MSLaunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9D91FBEDC54000E8F6B /* MSLaunchManager.m */; };
+		C568E9E21FBEEC73000E8F6B /* MSThirdController.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9E11FBEEC73000E8F6B /* MSThirdController.m */; };
+		C568E9E51FBEED2E000E8F6B /* MSThirdTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9E41FBEED2E000E8F6B /* MSThirdTableCell.m */; };
+		C568E9E91FBEF023000E8F6B /* MSThirdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9E81FBEF023000E8F6B /* MSThirdModel.m */; };
 		C5FB72431FBC472C003416B1 /* MSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72421FBC472C003416B1 /* MSCollectionView.m */; };
 		C5FB72471FBC47F8003416B1 /* MSSecondCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72461FBC47F8003416B1 /* MSSecondCollectionCell.m */; };
 		C5FB724A1FBC4831003416B1 /* MSSecondCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72491FBC4831003416B1 /* MSSecondCollectionViewLayout.m */; };
@@ -71,6 +74,12 @@
 		C568E9D51FBE7F23000E8F6B /* MSSecondDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSSecondDetailController.m; sourceTree = "<group>"; };
 		C568E9D81FBEDC54000E8F6B /* MSLaunchManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSLaunchManager.h; sourceTree = "<group>"; };
 		C568E9D91FBEDC54000E8F6B /* MSLaunchManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSLaunchManager.m; sourceTree = "<group>"; };
+		C568E9E01FBEEC73000E8F6B /* MSThirdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSThirdController.h; sourceTree = "<group>"; };
+		C568E9E11FBEEC73000E8F6B /* MSThirdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSThirdController.m; sourceTree = "<group>"; };
+		C568E9E31FBEED2E000E8F6B /* MSThirdTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSThirdTableCell.h; sourceTree = "<group>"; };
+		C568E9E41FBEED2E000E8F6B /* MSThirdTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSThirdTableCell.m; sourceTree = "<group>"; };
+		C568E9E71FBEF023000E8F6B /* MSThirdModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSThirdModel.h; sourceTree = "<group>"; };
+		C568E9E81FBEF023000E8F6B /* MSThirdModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSThirdModel.m; sourceTree = "<group>"; };
 		C5BC469D1FBAFBAD003F89ED /* XKProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XKProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FB72411FBC472C003416B1 /* MSCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCollectionView.h; sourceTree = "<group>"; };
 		C5FB72421FBC472C003416B1 /* MSCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCollectionView.m; sourceTree = "<group>"; };
@@ -104,6 +113,7 @@
 		C54FA8A41FBC158F00B28C87 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				C568E9DE1FBEEC61000E8F6B /* Third */,
 				C568E9D31FBE7F14000E8F6B /* SecondDetail */,
 				C54FA8D91FBC25CB00B28C87 /* Launch */,
 				C54FA8CC1FBC256500B28C87 /* First */,
@@ -234,6 +244,35 @@
 				C568E9D91FBEDC54000E8F6B /* MSLaunchManager.m */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		C568E9DE1FBEEC61000E8F6B /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				C568E9E61FBEF013000E8F6B /* Model */,
+				C568E9DF1FBEEC61000E8F6B /* View */,
+				C568E9E01FBEEC73000E8F6B /* MSThirdController.h */,
+				C568E9E11FBEEC73000E8F6B /* MSThirdController.m */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		C568E9DF1FBEEC61000E8F6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C568E9E31FBEED2E000E8F6B /* MSThirdTableCell.h */,
+				C568E9E41FBEED2E000E8F6B /* MSThirdTableCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C568E9E61FBEF013000E8F6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C568E9E71FBEF023000E8F6B /* MSThirdModel.h */,
+				C568E9E81FBEF023000E8F6B /* MSThirdModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C5BC46941FBAFBAD003F89ED = {
@@ -414,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C568E9C71FBD989A000E8F6B /* MSTransition.m in Sources */,
+				C568E9E91FBEF023000E8F6B /* MSThirdModel.m in Sources */,
 				C54FA91C1FBC34D400B28C87 /* main.m in Sources */,
 				C54FA90D1FBC2EBF00B28C87 /* AppDelegate.m in Sources */,
 				C5FB72431FBC472C003416B1 /* MSCollectionView.m in Sources */,
@@ -427,9 +467,11 @@
 				C54FA8E71FBC272500B28C87 /* XSecondController.m in Sources */,
 				C54FA8E61FBC272100B28C87 /* XFirstController.m in Sources */,
 				C568E9C41FBD988F000E8F6B /* MSScaleTransition.m in Sources */,
+				C568E9E51FBEED2E000E8F6B /* MSThirdTableCell.m in Sources */,
 				C568E9DA1FBEDC54000E8F6B /* MSLaunchManager.m in Sources */,
 				C54FA8E51FBC26AE00B28C87 /* XNavigationController.m in Sources */,
 				C54FA8E41FBC26AA00B28C87 /* XBaseController.m in Sources */,
+				C568E9E21FBEEC73000E8F6B /* MSThirdController.m in Sources */,
 				C568E9D61FBE7F23000E8F6B /* MSSecondDetailController.m in Sources */,
 				C54FA8E31FBC26A400B28C87 /* MSTableView.m in Sources */,
 				C568E9C11FBD8F88000E8F6B /* MSLaunchView.m in Sources */,

@@ -13,6 +13,7 @@
 #import "UIView+XK.h"
 #import "UICollectionView+XK.h"
 #import "UITableView+XK.h"
+#import "UIViewController+XK.h"
 
 #import "XKBaseController.h"
 #import "XKTabbar.h"
