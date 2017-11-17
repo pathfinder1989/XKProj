@@ -10,6 +10,9 @@
 
 #import "UIColor+XKit.h"
 #import "UIImage+XK.h"
+#import "UIView+XK.h"
+#import "UICollectionView+XK.h"
+#import "UITableView+XK.h"
 
 #import "XKBaseController.h"
 #import "XKTabbar.h"

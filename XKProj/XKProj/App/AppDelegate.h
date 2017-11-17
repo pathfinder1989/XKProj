@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class XTabBarController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -23,4 +24,11 @@
  当前显示的window
  */
 - (UIWindow *)appKeyWindow;
+
+/**
+ window根控制器
+
+ @return XTabBarControler
+ */
+- (XTabBarController *)windowRootController;
 @end

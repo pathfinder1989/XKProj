@@ -10,4 +10,5 @@
 
 @interface MSSecondCollectionCell : UICollectionViewCell
 
+@property(strong , readonly, nonatomic) UIImageView *iconImage;
 @end

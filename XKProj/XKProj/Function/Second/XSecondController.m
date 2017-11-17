@@ -10,9 +10,11 @@
 #import "MSCollectionView.h"
 #import "MSSecondCollectionViewLayout.h"
 #import "MSSecondCollectionCell.h"
+#import "MSScaleTransition.h"
+#import "MSSecondDetailController.h"
 
 @interface XSecondController ()
-<UICollectionViewDelegate, UICollectionViewDataSource, MSSecondCollectionViewLayoutDelegate>
+<UICollectionViewDelegate, UICollectionViewDataSource, MSSecondCollectionViewLayoutDelegate, MSTransitionProtocol>
 
 @property(strong ,nonatomic) MSCollectionView *collectionView;
 @property(strong ,nonatomic) MSSecondCollectionViewLayout *collectionViewLayout;
@@ -39,7 +41,8 @@
 
 #pragma mark - UICollectionViewDelegate, UICollectionViewDataSource
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
     return 30;
     return self.dataArray.count;
 }
@@ -51,12 +54,36 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.collectionView setCurrentSelectedIndexPath:indexPath];
+    
+    MSSecondDetailController *controller = [MSSecondDetailController new];
+    controller.shouldTransition = YES;
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 #pragma mark - MSSecondCollectionViewLayoutDelegate
 - (CGFloat)secondCollectionViewLayout:(MSSecondCollectionViewLayout *)flowLayout heightForWidth:(CGFloat)width atIndexPath:(NSIndexPath *)indexPath
 {
     BOOL isThree = indexPath.row % 3 == 0;
     return isThree ? 100 : 80;
 }
+
+#pragma mark - MSTransitionProtocol
+- (UIView *)transitionTargetView
+{
+    NSIndexPath *indexPath = [self.collectionView currentSelectedIndexPath];
+    MSSecondCollectionCell *selectedCell = (MSSecondCollectionCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    
+    return selectedCell.iconImage;
+}
+
+- (BOOL)shouldTransition
+{
+    return YES;
+}
+
 
 #pragma mark - property
 - (MSCollectionView *)collectionView

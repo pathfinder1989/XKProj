@@ -35,6 +35,11 @@
     return self.window;
 }
 
+- (XTabBarController *)windowRootController
+{
+    return self.tabbarController;
+}
+
 #pragma mark -初始化window
 - (void)initWindow
 {

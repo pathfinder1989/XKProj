@@ -10,7 +10,7 @@
 
 @interface MSSecondCollectionCell()
 
-@property(strong ,nonatomic) UIImageView *iconImage;
+@property(strong, readwrite ,nonatomic) UIImageView *iconImage;
 
 @end
 
