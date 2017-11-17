@@ -10,6 +10,7 @@
 #import "XKNavigationController.h"
 #import "XKManager.h"
 #import "XTabBarController.h"
+#import "MSLaunchManager.h"
 
 @interface AppDelegate ()
 @property(strong ,nonatomic) XTabBarController *tabbarController;
@@ -21,6 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self initWindow];
+    [[MSLaunchManager manager] showLaunchView];
+    
     return YES;
 }
 

@@ -18,4 +18,14 @@
     return .3;
 }
 
+- (UIView *)transitionTargetView
+{
+    return nil;
+}
+
+- (BOOL)shouldTransition
+{
+    return NO;
+}
+
 @end

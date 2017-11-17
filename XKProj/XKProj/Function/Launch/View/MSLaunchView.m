@@ -15,6 +15,11 @@
 
 @implementation MSLaunchView
 
+- (void)dealloc
+{
+    NSLog(@"%s", __FUNCTION__);
+}
+
 - (instancetype)init
 {
     self = [super init];
@@ -47,6 +52,7 @@
     if (!_backgroundImageView) {
         _backgroundImageView = [UIImageView new];
         _backgroundImageView.backgroundColor = [UIColor clearColor];
+//        _backgroundImageView.image = [UIImage appLaunchImage];
     }
     return _backgroundImageView;
 }
