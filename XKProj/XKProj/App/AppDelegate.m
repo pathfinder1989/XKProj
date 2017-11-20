@@ -21,7 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //初始化配置
+    [XKManager sharedInstance];
+    
+    //。。。
     [self initWindow];
+    
+    //添加开屏
     [[MSLaunchManager manager] showLaunchView];
     
     return YES;

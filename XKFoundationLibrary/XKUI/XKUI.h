@@ -11,6 +11,8 @@
 #import "UIColor+XKit.h"
 #import "UIImage+XK.h"
 #import "UIView+XK.h"
+#import "XKAppInfo.h"
+#import "XKDeviceInfo.h"
 #import "UICollectionView+XK.h"
 #import "UITableView+XK.h"
 #import "UIViewController+XK.h"

@@ -17,5 +17,5 @@ s.source_files  = '**/*.{h,m}'
 
 #s.vendored_frameworks = "UMMobClick.framework"
 #s.frameworks = ['CoreTelephony']
-#s.library = ['sqlite3', 'z']
+#s.library = ['c++', 'stdc++']
 end

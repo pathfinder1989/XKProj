@@ -31,7 +31,7 @@
 
 - (void)initialization
 {
-    
+    NSLog(@"fdasadfs--: %@ %@ %@", [XKAppInfo appName], [XKAppInfo appVersion], [XKDeviceInfo carrierName]);
 }
 
 
