@@ -17,6 +17,11 @@
 #import "UITableView+XK.h"
 #import "UIViewController+XK.h"
 
+#import "XKCycleScrollView.h"
+#import "XKCycleScrollViewCell.h"
+
+
+
 #import "XKBaseController.h"
 #import "XKTabbar.h"
 #import "XKTabBarController.h"

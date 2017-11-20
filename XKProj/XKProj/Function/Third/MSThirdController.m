@@ -10,6 +10,7 @@
 #import "MSTableView.h"
 #import "MSThirdTableCell.h"
 #import "MSThirdModel.h"
+#import "XCycleScrollController.h"
 
 @interface MSThirdController ()
 <UITableViewDelegate, UITableViewDataSource>
@@ -38,11 +39,18 @@
 #pragma mark - loadData
 - (void)loadData
 {
-    MSThirdModel *item1Model = [[MSThirdModel alloc] init];
-    item1Model.title = @"改变状态栏颜色";
-    item1Model.selector = @selector(updateStatusBarStyle);
-    [self.dataArray addObject:item1Model];
+    [self.dataArray addObject:[self itemModelWithTitle:@"改变状态栏颜色" selector:@selector(updateStatusBarStyle)]];
+    [self.dataArray addObject:[self itemModelWithTitle:@"循环滚动cycle" selector:@selector(cycleScroll)]];
     [self.tableView reloadData];
+}
+
+- (MSThirdModel *)itemModelWithTitle:(NSString *)title selector:(SEL)selector
+{
+    MSThirdModel *item1Model = [[MSThirdModel alloc] init];
+    item1Model.title = title;
+    item1Model.selector = selector;
+    
+    return item1Model;
 }
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
@@ -81,6 +89,12 @@
     sbarstyle = !sbarstyle;
     self.statusBarStyle = [NSNumber numberWithInteger:sbarstyle];
     
+}
+
+- (void)cycleScroll
+{
+    XCycleScrollController *controller = [XCycleScrollController new];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 

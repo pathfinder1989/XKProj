@@ -31,6 +31,12 @@
 - (void)initialization
 {
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
+    if (@available(iOS 11.0, *)){
+        self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    else{
+        
+    }
 }
 
 @end

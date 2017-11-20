@@ -29,6 +29,7 @@
 		C568E9E21FBEEC73000E8F6B /* MSThirdController.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9E11FBEEC73000E8F6B /* MSThirdController.m */; };
 		C568E9E51FBEED2E000E8F6B /* MSThirdTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9E41FBEED2E000E8F6B /* MSThirdTableCell.m */; };
 		C568E9E91FBEF023000E8F6B /* MSThirdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9E81FBEF023000E8F6B /* MSThirdModel.m */; };
+		C5F108731FC2BE3B008C385F /* XCycleScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F108721FC2BE3B008C385F /* XCycleScrollController.m */; };
 		C5FB72431FBC472C003416B1 /* MSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72421FBC472C003416B1 /* MSCollectionView.m */; };
 		C5FB72471FBC47F8003416B1 /* MSSecondCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72461FBC47F8003416B1 /* MSSecondCollectionCell.m */; };
 		C5FB724A1FBC4831003416B1 /* MSSecondCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72491FBC4831003416B1 /* MSSecondCollectionViewLayout.m */; };
@@ -81,6 +82,8 @@
 		C568E9E71FBEF023000E8F6B /* MSThirdModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSThirdModel.h; sourceTree = "<group>"; };
 		C568E9E81FBEF023000E8F6B /* MSThirdModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSThirdModel.m; sourceTree = "<group>"; };
 		C5BC469D1FBAFBAD003F89ED /* XKProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XKProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5F108711FC2BE3B008C385F /* XCycleScrollController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCycleScrollController.h; sourceTree = "<group>"; };
+		C5F108721FC2BE3B008C385F /* XCycleScrollController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCycleScrollController.m; sourceTree = "<group>"; };
 		C5FB72411FBC472C003416B1 /* MSCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCollectionView.h; sourceTree = "<group>"; };
 		C5FB72421FBC472C003416B1 /* MSCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCollectionView.m; sourceTree = "<group>"; };
 		C5FB72451FBC47F8003416B1 /* MSSecondCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSecondCollectionCell.h; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 		C54FA8A41FBC158F00B28C87 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				C5F108701FC2BE26008C385F /* Cycle */,
 				C568E9DE1FBEEC61000E8F6B /* Third */,
 				C568E9D31FBE7F14000E8F6B /* SecondDetail */,
 				C54FA8D91FBC25CB00B28C87 /* Launch */,
@@ -309,6 +313,15 @@
 			path = XKProj;
 			sourceTree = "<group>";
 		};
+		C5F108701FC2BE26008C385F /* Cycle */ = {
+			isa = PBXGroup;
+			children = (
+				C5F108711FC2BE3B008C385F /* XCycleScrollController.h */,
+				C5F108721FC2BE3B008C385F /* XCycleScrollController.m */,
+			);
+			path = Cycle;
+			sourceTree = "<group>";
+		};
 		C5FB72441FBC4753003416B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +479,7 @@
 				C54FA8E91FBC274700B28C87 /* MSFirstTableCell.m in Sources */,
 				C54FA8E71FBC272500B28C87 /* XSecondController.m in Sources */,
 				C54FA8E61FBC272100B28C87 /* XFirstController.m in Sources */,
+				C5F108731FC2BE3B008C385F /* XCycleScrollController.m in Sources */,
 				C568E9C41FBD988F000E8F6B /* MSScaleTransition.m in Sources */,
 				C568E9E51FBEED2E000E8F6B /* MSThirdTableCell.m in Sources */,
 				C568E9DA1FBEDC54000E8F6B /* MSLaunchManager.m in Sources */,

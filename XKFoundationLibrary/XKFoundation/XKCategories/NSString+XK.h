@@ -17,3 +17,5 @@
  */
 - (NSString *)stringByTrimmingCharacters;
 @end
+
+extern BOOL XKStringisEmpty(NSString *str);
