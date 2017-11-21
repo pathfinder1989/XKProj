@@ -16,6 +16,13 @@
  @return 处理过的字符串
  */
 - (NSString *)stringByTrimmingCharacters;
+
+/**
+ md5编码字符串
+
+ @return md5编码过的字符串
+ */
+- (NSString *)md5;
 @end
 
 extern BOOL XKStringisEmpty(NSString *str);

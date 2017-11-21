@@ -8,6 +8,15 @@
 #import <Foundation/Foundation.h>
 #import "XKGlobalMacros.h"
 
+#define DEVICE_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define NSVersionNumber_iOS_5_0 (DEVICE_SYSTEM_VERSION >= 5.0)
+#define NSVersionNumber_iOS_6_0 (DEVICE_SYSTEM_VERSION >= 6.0)
+#define NSVersionNumber_iOS_7_0 (DEVICE_SYSTEM_VERSION >= 7.0)
+#define NSVersionNumber_iOS_8_0 (DEVICE_SYSTEM_VERSION >= 8.0)
+#define NSVersionNumber_iOS_9_0 (DEVICE_SYSTEM_VERSION >= 9.0)
+#define NSVersionNumber_iOS_10_0 (DEVICE_SYSTEM_VERSION >= 10.0)
+#define NSVersionNumber_iOS_11_0 (DEVICE_SYSTEM_VERSION >= 11.0)
+
 @interface XKDeviceInfo : NSObject
 
 /**
