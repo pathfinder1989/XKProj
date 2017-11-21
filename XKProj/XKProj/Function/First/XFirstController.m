@@ -9,6 +9,7 @@
 #import "XFirstController.h"
 #import "MSTableView.h"
 #import "MSFirstTableCell.h"
+#import "XFont.h"
 
 @interface XFirstController ()
 <UITableViewDelegate, UITableViewDataSource>
@@ -26,6 +27,8 @@
     self.title = @"first";
     
     [self.view addSubview:self.tableView];
+    
+    UIFontWithSize(13);
 }
 
 - (void)viewDidLayoutSubviews

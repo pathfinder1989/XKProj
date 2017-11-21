@@ -30,6 +30,7 @@
 		C568E9E51FBEED2E000E8F6B /* MSThirdTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9E41FBEED2E000E8F6B /* MSThirdTableCell.m */; };
 		C568E9E91FBEF023000E8F6B /* MSThirdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C568E9E81FBEF023000E8F6B /* MSThirdModel.m */; };
 		C5F108731FC2BE3B008C385F /* XCycleScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F108721FC2BE3B008C385F /* XCycleScrollController.m */; };
+		C5F1087F1FC3C1F7008C385F /* XFont.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F1087E1FC3C1F7008C385F /* XFont.m */; };
 		C5FB72431FBC472C003416B1 /* MSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72421FBC472C003416B1 /* MSCollectionView.m */; };
 		C5FB72471FBC47F8003416B1 /* MSSecondCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72461FBC47F8003416B1 /* MSSecondCollectionCell.m */; };
 		C5FB724A1FBC4831003416B1 /* MSSecondCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB72491FBC4831003416B1 /* MSSecondCollectionViewLayout.m */; };
@@ -84,6 +85,8 @@
 		C5BC469D1FBAFBAD003F89ED /* XKProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XKProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F108711FC2BE3B008C385F /* XCycleScrollController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCycleScrollController.h; sourceTree = "<group>"; };
 		C5F108721FC2BE3B008C385F /* XCycleScrollController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCycleScrollController.m; sourceTree = "<group>"; };
+		C5F1087D1FC3C1F7008C385F /* XFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFont.h; sourceTree = "<group>"; };
+		C5F1087E1FC3C1F7008C385F /* XFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFont.m; sourceTree = "<group>"; };
 		C5FB72411FBC472C003416B1 /* MSCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCollectionView.h; sourceTree = "<group>"; };
 		C5FB72421FBC472C003416B1 /* MSCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCollectionView.m; sourceTree = "<group>"; };
 		C5FB72451FBC47F8003416B1 /* MSSecondCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSecondCollectionCell.h; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 		C54FA8EA1FBC2D0400B28C87 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C5F1087D1FC3C1F7008C385F /* XFont.h */,
+				C5F1087E1FC3C1F7008C385F /* XFont.m */,
 				C568E9C21FBD988F000E8F6B /* MSScaleTransition.h */,
 				C568E9C31FBD988F000E8F6B /* MSScaleTransition.m */,
 				C568E9C51FBD989A000E8F6B /* MSTransition.h */,
@@ -468,6 +473,7 @@
 				C568E9C71FBD989A000E8F6B /* MSTransition.m in Sources */,
 				C568E9E91FBEF023000E8F6B /* MSThirdModel.m in Sources */,
 				C54FA91C1FBC34D400B28C87 /* main.m in Sources */,
+				C5F1087F1FC3C1F7008C385F /* XFont.m in Sources */,
 				C54FA90D1FBC2EBF00B28C87 /* AppDelegate.m in Sources */,
 				C5FB72431FBC472C003416B1 /* MSCollectionView.m in Sources */,
 				C5FB72471FBC47F8003416B1 /* MSSecondCollectionCell.m in Sources */,
