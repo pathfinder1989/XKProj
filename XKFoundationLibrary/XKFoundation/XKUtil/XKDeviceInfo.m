@@ -7,13 +7,20 @@
 
 #import "XKDeviceInfo.h"
 
+//判断iP
 #include <ifaddrs.h>
 #include <arpa/inet.h>
 
+//判断设备类型
 #import "sys/utsname.h"
 
+//判断运营商
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
+
+//判断存储空间
+#include <sys/param.h>
+#include <sys/mount.h>
 
 @implementation XKDeviceInfo
 
@@ -124,5 +131,37 @@
     return  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO);
 }
 
++ (unsigned long)freeStorage
+{
+    NSString* path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] ;
+    NSFileManager* fileManager = [[NSFileManager alloc ]init];
+    NSDictionary *fileSysAttributes = [fileManager attributesOfFileSystemForPath:path error:nil];
+    NSNumber *freeSpace = [fileSysAttributes objectForKey:NSFileSystemFreeSize];
+    NSNumber *totalSpace = [fileSysAttributes objectForKey:NSFileSystemSize];
+    NSString *space = [NSString stringWithFormat:@"已占用%0.1fG/剩余%0.1fG",([totalSpace longLongValue] - [freeSpace longLongValue])/1024.0/1024.0/1024.0,[freeSpace longLongValue]/1024.0/1024.0/1024.0];
+    
+    
+//    struct statfs buf;
+//    long long freespace = -1;
+//    if(statfs("/var", &buf) >= 0){
+//        freespace = (long long)(buf.f_bsize * buf.f_bfree);
+//    }
+//    return freespace;//
+//    //return [NSString stringWithFormat:@"手机剩余存储空间为：%qi MB" ,freespace/1024/1024];
+}
+
++ (unsigned long)usedStorage
+{
+    struct statfs buf1;
+    long long maxspace = 0;
+    if (statfs("/", &buf1) >= 0) {
+        maxspace = (long long)buf1.f_bsize * buf1.f_blocks;
+    }
+    if (statfs("/private/var", &buf1) >= 0) {
+        maxspace += (long long)buf1.f_bsize * buf1.f_blocks;
+    }
+//    NSString * sizeStr = [NSString stringWithFormat:@"可用空间%0.2fG / 总空间%0.2fG",(double)freespace/1024/1024/1024,(double)maxspace/1024/1024/1024];
+    return maxspace;
+}
 
 @end

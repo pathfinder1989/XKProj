@@ -77,4 +77,15 @@
  @return YES 是 NO 不是
  */
 + (BOOL)isiPhoneX;
+
+
+/**
+ *  获取可用内存信息
+ */
++ (unsigned long)freeStorage;
+
+/**
+ *  获取当前app已用内存信息
+ */
++ (unsigned long)usedStorage;
 @end
