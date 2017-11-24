@@ -10,3 +10,8 @@
 @interface NSArray (XK)
 
 @end
+
+@interface NSMutableArray (XK)
+
+- (void)addObjectWithoutNil:(id)anObject;
+@end

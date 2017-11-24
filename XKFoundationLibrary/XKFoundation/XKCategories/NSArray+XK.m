@@ -10,3 +10,14 @@
 @implementation NSArray (XK)
 
 @end
+
+@implementation NSMutableArray (XK)
+
+- (void)addObjectWithoutNil:(id)anObject
+{
+    if (anObject != nil) {
+        [self addObject:anObject];
+    }
+}
+
+@end
