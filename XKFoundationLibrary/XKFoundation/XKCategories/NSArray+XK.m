@@ -9,11 +9,29 @@
 
 @implementation NSArray (XK)
 
+- (id)objectCheckingAtIndex:(NSUInteger)index
+{
+    if (index >= [self count]) {
+        return nil;
+    }
+    
+    id value = [self objectAtIndex:index];
+    if (value == [NSNull null]) {
+        return nil;
+    }
+    return value;
+}
+
+- (NSArray *)reverseObjects
+{
+    return [[self reverseObjectEnumerator] allObjects];
+}
+
 @end
 
 @implementation NSMutableArray (XK)
 
-- (void)addObjectWithoutNil:(id)anObject
+- (void)addObjectCheckNil:(id)anObject
 {
     if (anObject != nil) {
         [self addObject:anObject];

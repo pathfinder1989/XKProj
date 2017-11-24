@@ -9,9 +9,29 @@
 
 @interface NSArray (XK)
 
+
+/**
+ 数组取值，越界判断
+
+ @param index 索引
+ @return value
+ */
+- (id)objectCheckingAtIndex:(NSUInteger)index;
+
+/**
+ 反转数据-倒序输出
+
+ @return 倒序输出数组
+ */
+- (NSArray *)reverseObjects;
 @end
 
 @interface NSMutableArray (XK)
 
-- (void)addObjectWithoutNil:(id)anObject;
+/**
+ 添加到数组
+
+ @param anObject 不为nil
+ */
+- (void)addObjectCheckNil:(id)anObject;
 @end
