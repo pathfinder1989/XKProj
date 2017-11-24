@@ -11,30 +11,30 @@
 
 #pragma mark - 顶部高度量
 /** 信号栏高度 */
-extern CGFloat XKStatusBarHeight;
+UIKIT_EXTERN CGFloat XKStatusBarHeight;
 
 /** 顶部除了状态栏的危险区 */
-extern CGFloat XKTopDangerAreaExceptStatusHeight;
+UIKIT_EXTERN CGFloat XKTopDangerAreaExceptStatusHeight;
 
 /** 导航栏内容高度：永远为44 */
-extern CGFloat XKNavigationBarContentHeight;
+UIKIT_EXTERN CGFloat XKNavigationBarContentHeight;
 
 /** 导航栏显示的高度：44, 64, 88 */
-extern CGFloat XKNavigationBarHeight;
+UIKIT_EXTERN CGFloat XKNavigationBarHeight;
 
 #pragma mark - 底部高度量
 
 /** 底部栏高度 */
-extern CGFloat XKBottomBarHeight;
+UIKIT_EXTERN CGFloat XKBottomBarHeight;
 
 /** 底部栏危险区高度 */
-extern CGFloat XKBottomDangerAreaHeight;
+UIKIT_EXTERN CGFloat XKBottomDangerAreaHeight;
 
 /** 底部栏内容高度 */
-extern CGFloat XKBottomBarContentHeight;
+UIKIT_EXTERN CGFloat XKBottomBarContentHeight;
 
 /** 内容显示的最小Y 非X是20 X为44 */
-extern CGFloat XKAppContentMinY;
+UIKIT_EXTERN CGFloat XKAppContentMinY;
 
 #pragma mark - 屏幕
 #define APP_SCREEN_BOUNDS   [[UIScreen mainScreen] bounds]

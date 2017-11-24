@@ -20,6 +20,6 @@
 @end
 
 
-extern UIColor* XKColorFromRGB(CGFloat r, CGFloat g, CGFloat b);
-extern UIColor* XKColorFromRGBA(CGFloat r, CGFloat g, CGFloat b, CGFloat alpha);
+UIKIT_EXTERN UIColor* XKColorFromRGB(CGFloat r, CGFloat g, CGFloat b);
+UIKIT_EXTERN UIColor* XKColorFromRGBA(CGFloat r, CGFloat g, CGFloat b, CGFloat alpha);
 

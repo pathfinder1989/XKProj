@@ -16,7 +16,7 @@
     return [self stringByTrimmingCharactersInSet:set];
 }
 
-- (NSString *)md5
+- (NSString *)md5String
 {
     const char *cStr = [self UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];

@@ -12,4 +12,4 @@
 
 @end
 
-extern UIFont* UIFontWithSize(CGFloat size);
+UIKIT_EXTERN UIFont* UIFontWithSize(CGFloat size);

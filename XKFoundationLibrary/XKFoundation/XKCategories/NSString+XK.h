@@ -22,7 +22,14 @@
 
  @return md5编码过的字符串
  */
-- (NSString *)md5;
+- (NSString *)md5String;
 @end
 
-extern BOOL XKStringisEmpty(NSString *str);
+
+/**
+ 判断字符串是否为空
+
+ @param str 需要判断的字符串
+ @return YES是空 NO 不是空
+ */
+UIKIT_EXTERN BOOL XKStringisEmpty(NSString *str);
