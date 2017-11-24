@@ -35,9 +35,6 @@
 {
     NSLog(@"fdasadfs--: %@ %@ %@", [XKAppInfo appName], [XKAppInfo appVersion], [XKDeviceInfo carrierName]);
     
-    
-    [XKDeviceInfo getDivceSize];
-    
     NSLog(@"fdasadfs--: %0.2ld  总：%0.2ld", ((long)[XKDeviceInfo freeStorage])/1024/1024/1024, ((long)[XKDeviceInfo usedStorage]) / 1024/1024/1024);
     
     [XKManager freeDiskSpaceInBytes];

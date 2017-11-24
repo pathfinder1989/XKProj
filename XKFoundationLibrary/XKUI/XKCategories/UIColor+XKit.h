@@ -18,3 +18,8 @@
  */
 + (instancetype)colorWithHexString:(NSString *)hexStr;
 @end
+
+
+extern UIColor* XKColorFromRGB(CGFloat r, CGFloat g, CGFloat b);
+extern UIColor* XKColorFromRGBA(CGFloat r, CGFloat g, CGFloat b, CGFloat alpha);
+
