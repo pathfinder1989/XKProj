@@ -78,6 +78,8 @@
  */
 + (BOOL)isiPhoneX;
 
++ (BOOL)isPad;
++ (BOOL)isSimulator;
 
 /**
  *  获取可用内存信息
