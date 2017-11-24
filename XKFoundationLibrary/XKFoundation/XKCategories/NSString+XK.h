@@ -23,6 +23,13 @@
  @return md5编码过的字符串
  */
 - (NSString *)md5String;
+
+#pragma mark - base64
+- (NSString *)base64EncodedString;
+- (NSString *)base64DecodedString;
++ (NSString *)stringWithBase64EncodedString:(NSString *)string;
+- (NSString *)base64EncodedStringWithWrapWidth:(NSUInteger)wrapWidth;
+- (NSData *)base64DecodedData;
 @end
 
 
