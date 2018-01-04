@@ -32,4 +32,12 @@
  该view所在的controller
  */
 @property(strong , readonly, nonatomic) UIViewController *controller;
+
+/**
+ 判断View是否显示在屏幕上
+ 
+ @return yes no
+ */
+- (BOOL)isDisplayedInScreen;
+
 @end

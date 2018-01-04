@@ -41,4 +41,35 @@
     return nil;
 }
 
+- (BOOL)isDisplayedInScreen
+{
+    if (self == nil) {
+        return NO;
+    }
+    
+    CGRect screenRect = [UIScreen mainScreen].bounds;
+    CGRect rect = [self convertRect:self.frame fromView:nil];
+    if (CGRectIsEmpty(rect) || CGRectIsNull(rect)) {
+        return NO;
+    }
+    
+    if (self.hidden) {
+        return NO;
+    }
+    
+    if (self.superview == nil) {
+        return NO;
+    }
+    
+    if (CGSizeEqualToSize(rect.size, CGSizeZero)) {
+        return NO;
+    }
+    
+    CGRect intersectionRect = CGRectIntersection(rect, screenRect);
+    if (CGRectIsEmpty(intersectionRect) || CGRectIsNull(intersectionRect)) {
+        return NO;
+    }
+    
+    return YES;
+}
 @end
